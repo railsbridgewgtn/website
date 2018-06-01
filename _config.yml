@@ -1,0 +1,22 @@
+title: RailsBridge Wellington 2018
+email: serenadantingchen@gmail.com
+description: >
+  RailsBridge Wellington is a free weekend workshop of girls, 
+  women, and underrepresented peoples in the tech sector to get 
+  a taste of programming in a warm and supportive environment. 
+  This year our workshop will be at Flux Federation on August 11-12! 
+baseurl: "" 
+url: "" 
+twitter_username: railsgirlswgtn
+github_username: railsbridgewgtn
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+sass:
+  sass_dir: _sass
+  style: compressed
