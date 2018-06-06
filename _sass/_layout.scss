@@ -1,0 +1,57 @@
+// LAYER 0 - stuck to screen
+
+.wrap {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+  .titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .top-left {
+    flex: 0 1 auto;
+    align-self: flex-start;
+  }
+
+  .bottom-right {
+    flex: 0 1 auto;
+    align-self: flex-end;
+    text-align: right;
+  }
+
+// LAYER 1 - normal scrolling
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+  .content-text {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .first-paragraph {
+    margin-top: 16remT;
+  }
+
+// Utilities
+
+.fixed {
+  position: fixed;
+}

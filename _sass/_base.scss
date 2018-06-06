@@ -1,0 +1,49 @@
+// Reset
+
+* {
+  box-sizing: border-box;
+  &:focus {
+    outline: 0.625rem solid var(--pink-light);
+    transition: 50ms;
+  }
+}
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+// Base
+
+body {
+  font: $font-weight #{$font-size}/#{$line-height} $font-monospace;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: "kern" 1,"liga" 1,"calt" 1,"pnum" 1,"tnum" 0,"onum" 1,"lnum" 0,"dlig" 0;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+
+// Vertical Rhythm
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+  margin-bottom: $spacer;
+}
+
+// Images
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
