@@ -35,6 +35,7 @@
   .top-left {
     flex: 0 1 auto;
     align-self: flex-start;
+    padding-top: 1.875rem;
   }
 
   .bottom-right {
@@ -58,7 +59,7 @@
 }
 
   .content-text {
-    max-width: 600px;
+    max-width: 520px;
     margin: 0 auto;
   }
 
@@ -78,7 +79,7 @@
     width: 200px;
     height: 200px;
     margin: 100px auto;
-    background: pink;
+    background: linear-gradient(var(--pink-light), var(--orange-light));
   }
 
 
