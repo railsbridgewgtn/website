@@ -12,3 +12,4 @@ static website for railsbridge wellington
 - [ ] css grid the content
 - [ ] add illustrations
 - [ ] add content
+- [ ] make a cute cursor lol
