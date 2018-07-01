@@ -5,11 +5,13 @@ static website for railsbridge wellington
 
 - [x] skeleton layout
 - [x] parallax effect
-- [ ] titles in bg
+- [-] titles in bg
 - [ ] titles fade on scroll
+- [x] favicon
 - [ ] animate bg linear gradients
 - [ ] css grid the bg
-- [ ] css grid the content
+- [x] css grid the content
+- [ ] responsive grid
 - [ ] add illustrations
 - [ ] add content
 - [ ] make a cute cursor lol

@@ -3,7 +3,7 @@
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  position:relative;
+  position: relative;
 }
 
 .parallax {
@@ -16,11 +16,23 @@
 
 // LAYER 0 - stuck to screen
 
-.wrap {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
+.only-desktop {
+  display: none;
+  @include query($bp-tablet){
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+  }
 }
+
+.only-mobile {
+  display: block;
+  @include query($bp-tablet){
+    display: none;
+  }
+}
+
   .titles {
     display: flex;
     flex-direction: column;
@@ -40,8 +52,11 @@
 
   .bottom-right {
     flex: 0 1 auto;
-    align-self: flex-end;
-    text-align: right;
+    align-self: flex-start;
+
+    @include query($bp-tablet){
+      align-self: flex-end
+    }
   }
 
 // LAYER 1 - normal scrolling
@@ -53,35 +68,92 @@
 .content {
   position: relative;
   z-index: 10;
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 20px;
+  padding: 5vw;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); 
+  column-gap: 20px;
+
+  @include query($bp-tablet){
+    grid-template-columns: repeat(6, 1fr); 
+    column-gap: 20px;
+  }
+
+  @include query($bp-desktop) {
+    grid-template-columns: repeat(12, 1fr); 
+    column-gap: 20px;
+  }
 }
 
   .content-text {
-    max-width: 520px;
-    margin: 0 auto;
+    grid-column-start: 1; 
+    grid-column-end: 1; 
+    margin: 10vh 0;
+
+    @include query($bp-tablet){
+      grid-column-start: 2; 
+      grid-column-end: 6; 
+      margin: 10vh 0;
+    }
+
+    @include query($bp-desktop){
+      grid-column-start: 4; 
+      grid-column-end: 10; 
+      margin: 10vh 0;
+    }
   }
 
   .first-paragraph {
-    margin-top: 16remT;
+    @include query($bp-tablet){
+      margin-top: 26vh;
+    }
   }
 
-// LAYER 2 - back
+// LAYER 2
 
 .layer2 {
-  transform: translateZ(-2px) scale(3);
-  z-index: 2;
+  transform: translateZ(-2px) translateY(-100rem) scale(2);
+  z-index: 9;
   position: relative;
 }
 
-  .test-panel {
-    width: 200px;
-    height: 200px;
-    margin: 100px auto;
-    background: linear-gradient(var(--pink-light), var(--orange-light));
+// LAYER 3
+
+.layer3 {
+  transform: translateZ(-3px) translateY(-200rem) scale(5);
+  z-index: 8;
+  position: relative;
+}
+
+.background {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); 
+  grid-template-rows: repeat(12, 9vh);
+  column-gap: 10px;
+  row-gap: 10px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+
+  .panel {
+    background: linear-gradient(30deg, var(--pink-light), var(--orange-light));
+    opacity: 0.2;
   }
 
+    #p2 {
+      grid-column-start: 8;
+      grid-column-end: 11;
+      grid-row-start: 5; 
+      grid-row-end: 8; 
+    }
 
+    #p3 {
+      grid-column-start: 4;
+      grid-column-end: 7;
+      grid-row-start: 8; 
+      grid-row-end: 11; 
+    }
 
 // Utilities

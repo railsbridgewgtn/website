@@ -5,7 +5,7 @@
 
   <body>
 
-    <div class="wrap">
+    <div class="only-desktop">
       <div class="titles">
         <h1 class="top-left font-big heading">
           <img src="/images/RB-diamond.svg"/><br/>
@@ -21,35 +21,38 @@
 
     <div class="parawrap">
 
+      <div class="only-mobile">
+      <div class="titles">
+        <h1 class="top-left font-big heading">
+          <img src="/images/RB-diamond.svg"/><br/>
+          RailsBridge<br/>
+          Wellington
+        </h1>
+        <h2 class="bottom-right font-big heading">
+          August 11-12<br/>
+          Flux Federation
+        </h2>
+      </div>
+    </div>
+
       <div class="content parallax layer1">
 
         {{ content }}
 
       </div>
 
-      <div class="background parallax layer2">
-        
-        <div class="test-panel"></div>
-        <div class="test-panel"></div>
-        <div class="test-panel"></div>
-        <div class="test-panel"></div>
-        <div class="test-panel"></div>
-        <div class="test-panel"></div>
-        <div class="test-panel"></div>
-        <div class="test-panel"></div>
-      
-      </div>
+      <div class="background parallax layer2"></div>
 
       <div class="background parallax layer3">
         
-        <div class="test-pan"></div>
-        <div class="test-pan"></div>
-        <div class="test-pan"></div>
-        <div class="test-pan"></div>
-        <div class="test-pan"></div>
-        <div class="test-pan"></div>
-        <div class="test-pan"></div>
-        <div class="test-pan"></div>
+        <div class="panel" style="
+          grid-column-start: 3; 
+          grid-column-end: 6; 
+          grid-row-start: 1; 
+          grid-row-end: 6; 
+        "></div>
+        <div class="panel" id="p2"></div>
+        <div class="panel" id="p3"></div>
       
       </div>
 
