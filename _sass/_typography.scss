@@ -28,10 +28,27 @@ h2.font-big {
   }
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--orange);
+}
+
 h3 {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--orange);
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--pink-dark);
+}
+
+strong {
+  font-weight: bold;
+  color: var(--pink-dark);
 }
 
 .content-text p {

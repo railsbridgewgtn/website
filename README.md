@@ -9,9 +9,10 @@ static website for railsbridge wellington
 - [ ] titles fade on scroll
 - [x] favicon
 - [ ] animate bg linear gradients
-- [ ] css grid the bg
+- [x] css grid the bg
 - [x] css grid the content
-- [ ] responsive grid
+- [x] responsive grid
 - [ ] add illustrations
-- [ ] add content
+- [x] add faqs
+- [ ] add organisers
 - [ ] make a cute cursor lol

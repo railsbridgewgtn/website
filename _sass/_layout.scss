@@ -118,18 +118,36 @@
   position: relative;
 }
 
-// LAYER 3
+// LAYER 3 & 4
 
 .layer3 {
-  transform: translateZ(-3px) translateY(-200rem) scale(5);
+  transform: translateZ(-3px) translateY(-650vh) scale(5);
   z-index: 8;
   position: relative;
+  @include query($bp-tablet){
+    transform: translateZ(-3px) translateY(-450vh) scale(5);
+  }
+  @include query($bp-desktop) {
+    transform: translateZ(-3px) translateY(-350vh) scale(5);
+  }
+}
+
+.layer4 {
+  transform: translateZ(-4px) translateY(-750vh) scale(6);
+  z-index: 8;
+  position: relative;
+  @include query($bp-tablet){
+    transform: translateZ(-4px) translateY(-650vh) scale(6);
+  }
+  @include query($bp-desktop) {
+    transform: translateZ(-4px) translateY(-550vh) scale(6);
+  }
 }
 
 .background {
   display: grid;
   grid-template-columns: repeat(12, 1fr); 
-  grid-template-rows: repeat(12, 9vh);
+  grid-template-rows: repeat(19, 9vw);
   column-gap: 10px;
   row-gap: 10px;
   max-width: var(--max-width);
@@ -141,19 +159,5 @@
     background: linear-gradient(30deg, var(--pink-light), var(--orange-light));
     opacity: 0.2;
   }
-
-    #p2 {
-      grid-column-start: 8;
-      grid-column-end: 11;
-      grid-row-start: 5; 
-      grid-row-end: 8; 
-    }
-
-    #p3 {
-      grid-column-start: 4;
-      grid-column-end: 7;
-      grid-row-start: 8; 
-      grid-row-end: 11; 
-    }
 
 // Utilities
