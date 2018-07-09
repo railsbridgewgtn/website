@@ -47,3 +47,85 @@ img {
   max-width: 100%;
   vertical-align: middle;
 }
+
+// Buttons
+
+%button {
+  position: absolute;
+  content: '';
+  transition: all 50ms;
+}
+
+.button {
+  text-decoration: none;
+  display: block;
+  background-color: var(--orange);
+  color: white;
+  position: relative;
+  left: -0.5em;
+  top: -0.5em;
+  margin: 3em 0 0;
+  padding: 1em;
+  transition: all 50ms;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  &::before {
+    @extend %button;
+    bottom: -1em;
+    height: 1em;
+    width: 100%;
+    left: 0.5em;
+    transform: skewX(45deg);
+    background-color: darken($orange, 20%);
+  }
+
+  &::after {
+    @extend %button;
+    right: -1em;
+    height: 100%;
+    width: 1em;
+    bottom: -0.5em;
+    transform: skewY(45deg);
+    background-color: darken($orange, 30%);
+  }
+
+
+  &:hover, &:focus {
+    color: white;
+    outline: none;
+    left: -1em;
+    top: -1em;
+    transition: all 50ms;
+    &::before {
+      bottom: -1.5em;
+      height: 1.5em;
+      left: calc(0.75em + 1px);
+    }
+    
+    &::after {
+      right: -1.5em;
+      width: 1.5em;
+      bottom: calc(-0.75em - 1px);
+    } 
+  }
+
+  &:active {
+    outline: none;
+    left: 0;
+    top: 0;
+    transition: all 50ms;
+    &::before {
+      bottom: -0.5em;
+      height: 0.5em;
+      left: calc(0.25em + 1px);
+    }
+    
+    &::after {
+      right: -0.5em;
+      width: 0.5em;
+      bottom: calc(-0.25em - 1px);
+    } 
+  }
+}

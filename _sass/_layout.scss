@@ -63,26 +63,26 @@
 
 .layer1 {
   transform: translateZ(0);
+  z-index: 10;
 }
 
 .content {
   position: relative;
-  z-index: 10;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 5vw;
+  padding: 15rem 5vw 5vw;
   display: grid;
   grid-template-columns: repeat(1, 1fr); 
   column-gap: 20px;
 
   @include query($bp-tablet){
     grid-template-columns: repeat(6, 1fr); 
-    column-gap: 20px;
+    padding: 5vw;
   }
 
   @include query($bp-desktop) {
     grid-template-columns: repeat(12, 1fr); 
-    column-gap: 20px;
+
   }
 }
 
@@ -113,35 +113,20 @@
 // LAYER 2
 
 .layer2 {
-  transform: translateZ(-2px) translateY(-100rem) scale(2);
+  transform: translateZ(-1px) scale(2);
   z-index: 9;
-  position: relative;
 }
 
 // LAYER 3 & 4
 
 .layer3 {
-  transform: translateZ(-3px) translateY(-650vh) scale(5);
+  transform: translateZ(-3px) scale(4);
   z-index: 8;
-  position: relative;
-  @include query($bp-tablet){
-    transform: translateZ(-3px) translateY(-450vh) scale(5);
-  }
-  @include query($bp-desktop) {
-    transform: translateZ(-3px) translateY(-350vh) scale(5);
-  }
 }
 
 .layer4 {
-  transform: translateZ(-4px) translateY(-750vh) scale(6);
-  z-index: 8;
-  position: relative;
-  @include query($bp-tablet){
-    transform: translateZ(-4px) translateY(-650vh) scale(6);
-  }
-  @include query($bp-desktop) {
-    transform: translateZ(-4px) translateY(-550vh) scale(6);
-  }
+  transform: translateZ(-4px) scale(6);
+  z-index: 7;
 }
 
 .background {
