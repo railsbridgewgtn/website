@@ -6,33 +6,14 @@
   <body>
 
     <div class="only-desktop">
-      <div class="titles">
-        <h1 class="top-left font-big heading"><a href="/">
-          <img src="/images/RB-diamond.svg"/><br/>
-          RailsBridge<br/>
-          Wellington
-        </a></h1>
-        <h2 class="bottom-right font-big heading">
-          August 11-12<br/>
-          Flux Federation
-        </h2>
-      </div>
+      {% include titles.html %}
     </div>
 
     <div class="parawrap">
 
       <div class="only-mobile">
-      <div class="titles">
-        <h1 class="top-left font-big heading"><a href="/">
-          <img src="/images/RB-diamond.svg"/><br/>
-          RailsBridge<br/>
-          Wellington
-        </a></h1>
-        <h2 class="bottom-right font-big heading">
-          August 11-12<br/>
-          Flux Federation
-        </h2>
-      </div>
+      {% include titles.html %}
+      {% include nav.html %}
     </div>
 
       <div class="parallax layer1"><div class="content">
@@ -91,6 +72,10 @@
         "></div>
       </div></div>
 
+    </div>
+
+    <div class="only-desktop-nav">
+      {% include nav.html %}
     </div>
 
   </body>

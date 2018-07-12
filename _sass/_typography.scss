@@ -58,7 +58,7 @@ strong {
 a {
   color: var(--orange);
   &:hover {
-    color: var(--pink);
+    color: var(--orange-light);
     transition: 500ms;
   }
 }
@@ -69,4 +69,11 @@ blockquote {
 
 .titles a {
   text-decoration: none;
+}
+
+nav a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }

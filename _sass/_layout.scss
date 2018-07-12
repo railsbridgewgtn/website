@@ -145,4 +145,57 @@
     opacity: 0.2;
   }
 
+// NAV
+
+.only-mobile nav {
+  display: block;
+  position: relative;
+  top: -13.5rem;
+  li {
+    display: block;
+    text-align: right;
+    padding: 10px;
+  }
+  @include query($bp-tablet){
+    display: none;
+  }
+}
+
+.only-desktop-nav {
+  display: none;
+  nav {
+    text-align: right;
+  }
+  @include query($bp-tablet){
+    display: block;
+    position: absolute; 
+    top: 130px; 
+    width: 100%; 
+    max-width: 1800px; 
+    margin: 0 auto; 
+    padding: 0 20px;
+  }
+}
+
+nav {
+  .apply {
+    color: white;
+    font-weight: bold;
+    background: var(--orange);
+    padding: 10px;
+    &:hover {
+      text-decoration: none;
+      background: var(--orange-light);
+    }
+  }
+}
+
 // Utilities
+
+.nolist {
+  list-style: none;
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
