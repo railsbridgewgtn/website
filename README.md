@@ -16,4 +16,4 @@ static website for railsbridge wellington
 - [x] add faqs
 - [x] add organisers
 - [ ] make a cute cursor lol
-- [ ] add nav
+- [x] add nav
